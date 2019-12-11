@@ -1,0 +1,18 @@
+import pandas
+import pandasql
+
+def select_first_50(filename):
+    # Read in our aadhaar_data csv to a pandas dataframe.  Afterwards, we rename the columns
+    # by replacing spaces with underscores and setting all characters to lowercase, so the
+    # column names more closely resemble columns names one might find in a table.
+    aadhaar_data = pandas.read_csv(filename)
+    aadhaar_data.rename(columns = lambda x: x.replace(' ', '_').lower(), inplace=True)
+
+   
+    q = aadhaar_data[["registrar","enrolment_agency"]].head(50)
+
+   
+
+    #Execute your SQL command against the pandas frame
+    
+    return q   
