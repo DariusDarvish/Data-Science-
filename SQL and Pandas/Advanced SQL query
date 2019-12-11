@@ -42,7 +42,7 @@ def aggregate_query(filename):
     WHERE
     age>50
     GROUP BY
-    gender
+    gender, district 
     """
     
     
