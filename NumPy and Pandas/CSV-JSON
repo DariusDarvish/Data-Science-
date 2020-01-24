@@ -1,0 +1,8 @@
+import pandas as pd
+df = pd.read_csv('C:\\Users\\Darius Darvish\\Desktop\\Exercise Files\\Ch02\\challenge\\taxi.csv.bz2')
+df.dtypes
+df.to_json(orient='records',lines=True)
+
+
+
+#datetime column 2,3,7(Null value)
