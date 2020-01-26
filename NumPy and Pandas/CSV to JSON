@@ -1,5 +1,9 @@
 import pandas as pd
 df = pd.read_csv('C:\\Users\\Darius Darvish\\Desktop\\Exercise Files\\Ch02\\challenge\\taxi.csv.bz2')
+
+df['tpep_pickup_datetime']=pd.to_datetime(df['tpep_pickup_datetime'])
+df['tpep_dropoff_datetime']=pd.to_datetime(df['tpep_dropoff_datetime'])
+
 df.dtypes
 df.to_json(orient='records',lines=True)
 pd.read_json(_, orient='split')
